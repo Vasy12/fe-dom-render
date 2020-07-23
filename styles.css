@@ -1,1 +1,74 @@
 @import url("./reset.css");
+
+:root {
+  font-family: sans-serif;
+  font-size: 14px;
+}
+
+.flexCenter {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#usersList {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-evenly;
+}
+
+.userListItem {
+  margin: 20px 10px;
+}
+
+.userCard {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  border: 6px solid red;
+  width: 320px;
+  overflow: hidden;
+}
+
+.userPictureWrapper {
+  position: relative;
+  background-color: hotpink;
+  width: inherit;
+  height: 320px;
+}
+
+.userInitials {
+  color: white;
+  font-size: 6rem;
+}
+
+.userPicture {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  width: inherit;
+  height: inherit;
+  object-fit: cover;
+  object-position: top;
+}
+
+.userFullName {
+  margin: 30px auto;
+  text-align: center;
+  font-size: 2rem;
+}
+
+.userFullName:empty::before {
+  content: "anonymous";
+}
+
+.removeBtn {
+  border: none;
+  display: inline;
+  padding: 30px;
+}
+.removeBtn:hover {
+  background-color: red;
+}
